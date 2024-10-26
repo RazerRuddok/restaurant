@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Futurum - Меню</title>
+    <title>Futurum - Главная</title>
     <style>
       body {
         font-family: Arial, sans-serif;
@@ -191,50 +191,6 @@
       .shadow-header {
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
       }
-      img {
-        border: 1px solid #ddd;
-        border-radius: 4px;
-        padding: 5px;
-        width: 150px;
-      }
-      .image-text-container {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap; /* позволяет адаптировать блоки на меньших экранах */
-        margin: 20px 0;
-      }
-
-      .image-text-block {
-        background-color: #fff;
-        border-radius: 8px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        overflow: hidden;
-        width: 30%; /* Ширина блока (можно изменять для адаптивности) */
-        margin: 10px; /* Отступ между блоками */
-        text-align: center;
-        transition: transform 0.3s; /* Анимация при наведении */
-      }
-
-      .image-text-block:hover {
-        transform: scale(1.05); /* Увеличение при наведении */
-      }
-
-      .image-text-block img {
-        width: 100%;
-        height: auto; /* Поддержка соотношения сторон */
-      }
-
-      .image-text-block h3 {
-        font-size: 1.5em;
-        color: #333;
-        margin: 10px 0;
-      }
-
-      .image-text-block p {
-        font-size: 1em;
-        color: #555;
-        padding: 0 10px 10px; /* Отступ внутри блока */
-      }
     </style>
   </head>
   <body>
@@ -266,49 +222,20 @@
         >
       </section>
     </main>
-    <div class="modal reservation-modal">
-      <div class="image-text-container">
-        <div class="image-text-block">
-          <img src="res/gen_mod_salat.webp" alt="Блюдо 1" />
-          <h3>Генетически модифицированный салат</h3>
-          <p>
-            Cалат из овощей, выведенных с помощью генной инженерии, с
-            уникальными вкусами и текстурами, поданный с соусом, созданным с
-            использованием молекулярной гастрономии.
-          </p>
-        </div>
-        <div class="image-text-block">
-          <img src="res/soupe.webp" alt="Блюдо 2" />
-          <h3>Крем-суп из тыквы</h3>
-          <p>Яркий оранжевый суп с семечками и зеленью.</p>
-        </div>
-        <div class="image-text-block">
-          <img src="res/fruct_salst.webp" alt="Блюдо 3" />
-          <h3>Фруктовый салат</h3>
-          <p>Яркое сочетание различных фруктов, украшенное мятой.</p>
-        </div>
-      </div>
 
-      <div class="image-text-container">
-        <div class="image-text-block">
-          <img src="res/eco_des.webp" alt="Блюдо 1" />
-          <h3>Эко-десерт</h3>
-          <p>
-            Десерт, созданный из переработанных ингредиентов, с использованием
-            технологий, минимизирующих отходы, и поданный в экологически чистой
-            упаковке.
-          </p>
-        </div>
-        <div class="image-text-block">
-          <img src="res/kulin_exper.webp" alt="Блюдо 2" />
-          <h3>Кулинарный эксперимент</h3>
-          <p>Яркий оранжевый суп с семечками и зеленью.</p>
-        </div>
-        <div class="image-text-block">
-          <img src="res/resotto.webp" alt="Блюдо 3" />
-          <h3>Ризотто с "грибами"</h3>
-          <p>Кремообразное ризотто с лесными грибами и пармезаном.</p>
-        </div>
+    <div class="modal delivery-modal">
+      <div class="modal-content">
+        <span class="close-delivery-modal">&times;</span>
+        <h2>Забронировать столик</h2>
+        <form>
+          <label for="name">Имя:</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="phone">Телефон:</label>
+          <input type="tel" id="phone" name="phone" required />
+
+          <button type="submit">Забронировать</button>
+        </form>
       </div>
     </div>
     <br /><br /><br /><br /><br /><br />
